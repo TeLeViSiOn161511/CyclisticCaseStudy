@@ -1,0 +1,7 @@
+cyclistic_csv_datasets/
+cyclistic_xls_datasets/
+*.pbix
+*.pdf
+*.docx
+01-importing_files.sql
+x*.sql
