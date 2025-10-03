@@ -56,7 +56,7 @@ The datasets are stored in spreadsheets. There are twelve .csv files in total an
      * Used `ROW_NUMBER()` to remove duplicates. Duplicates are checked by rows having the same `ride_id`, `rideable_type`, `started_at`, `ended_at`, & `member_casual`. Rows containing null values were excluded.
      * A staging table `cd_stage1` was created to safely clean and preprocess data before analysis.
      * After removing duplicates, there are now 5,860,516 remaining rows.
-   - Check values in columns `rideable_type` and `member_casual` for any misspellings. Based on the results below, there are 3 distinct types of rides and 2 distinct types of riders.
+   - Check values in columns `rideable_type` and `member_casual` for any misspellings. Based on the results below, there are 3 distinct types of rides and 2 distinct types of riders.<br>
      <img width="198" height="144" alt="image" src="https://github.com/user-attachments/assets/f15e61a5-2025-4438-a005-a0efab854bae" />
      <img width="188" height="116" alt="image" src="https://github.com/user-attachments/assets/ed07d9d2-eb37-4502-a582-6967e54d9b3f" />
 
