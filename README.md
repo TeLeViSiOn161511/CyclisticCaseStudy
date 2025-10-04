@@ -187,7 +187,7 @@ Business Task:
 
 
 ## Step 4-5: Analyse & Share
-The objective of the analysis is to compare how annual members and casual riders use the Cyclitstic bikes throughout the year. MySQL and Microsoft Power BI were used to perform analysis and visualisations. ([View query file]("cyclistic_eda.sql"))
+<p>The objective of the analysis is to compare how annual members and casual riders use the Cyclitstic bikes throughout the year. MySQL and Microsoft Power BI were used to perform analysis and visualisations. (<a href="cyclistic_eda.sql">View query file</a>)
 
 ### Part A: Rider distribution
 <section>
