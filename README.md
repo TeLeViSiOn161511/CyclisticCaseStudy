@@ -111,11 +111,11 @@ Business Task:
    </li>
    
    <li>
-      <p>Next, the files are then uploaded into a MySQL database for further processing and analysis due to its extremely large size. All 12 files are combined into one large dataset and stored in a new table <code>combined_data</code>, which contains a total of 6,005,441 data rows.</p>
+      <p>Next, the files are then uploaded into a MySQL database for further processing and analysis due to its extremely large size. All 12 files are combined into one large dataset and stored in a new table <code>combined_data</code>, which contains a total of 6,005,441 data rows. (<a href="cyclistic_combine_files.sql">View query file</a>)</p>
    </li>
    
    <li>
-      <p>The cleaning steps in MySQL are as follows:</p>
+      <p>The cleaning steps in MySQL are as follows: (<a href="cyclistic_data_clean.sql">View query file</a>)</p>
       <ol>
          <li>
             <p>Checking for null values for each column and remove rows if <code>ride_id</code> contains null values. The table below shows the number of null values in each column. There are no null values present in <code>ride_id</code>, therefore no rows are removed.</p>
@@ -150,7 +150,7 @@ Business Task:
    </li>
    
    <li>
-      <p>The preprocessing steps in MySQL are as follows:</p>
+      <p>The preprocessing steps in MySQL are as follows: (<a href="cyclistic_data_preprocess.sql">View query file</a>)</p>
       <ol>
          <li>
             Create column <code>ride_length</code>, which is the length of each ride by subtracting column <code>started_at</code> from <code>ended_at</code>.
@@ -187,7 +187,7 @@ Business Task:
 
 
 ## Step 4-5: Analyse & Share
-The objective of the analysis is to compare how annual members and casual riders use the Cyclitstic bikes throughout the year. MySQL and Microsoft Power BI were used to perform analysis and visualisations.
+The objective of the analysis is to compare how annual members and casual riders use the Cyclitstic bikes throughout the year. MySQL and Microsoft Power BI were used to perform analysis and visualisations. ([View query file]("cyclistic_eda.sql"))
 
 ### Part A: Rider distribution
 <section>
@@ -265,7 +265,8 @@ The objective of the analysis is to compare how annual members and casual riders
    <p>Additionally, I created a histogram of the average bike ride lengths, as shown below, to observe the overall distribution shape. Based on the histogram, the distribution is significantly right-skewed.</p><br>
    
    <div align='center'>
-      <img width="614" height="325" alt="image" src="https://github.com/user-attachments/assets/9c23994e-2c2d-4f13-b388-7adab2761c29" />  
+      <img width="614" height="325" alt="image" src="https://github.com/user-attachments/assets/9c23994e-2c2d-4f13-b388-7adab2761c29" />
+      <p>Skewed distribution of ride lengths</p>
    </div><br>
    
    <p>From these observations, it is concluded that the outliers had an effect on the averages for both casual and member rides. Due to the skewed distribution, a median would be a more suitable choice to compare the bike ride lengths between casual and member riders.</p>
