@@ -118,7 +118,7 @@ Business Task:
       <p>The cleaning steps in MySQL are as follows:</p>
       <ol>
          <li>
-            <p>Checking for null values for each column and remove rows if <code>ride_id</code>`` contains null values. The table below shows the number of null values in each column. There are no null values present in <code>ride_id</code>``, therefore no rows are removed.</p>
+            <p>Checking for null values for each column and remove rows if <code>ride_id</code> contains null values. The table below shows the number of null values in each column. There are no null values present in <code>ride_id</code>, therefore no rows are removed.</p>
             <img width="940" height="42" alt="image" src="https://github.com/user-attachments/assets/acfa0367-3db7-431e-8b24-c8154d4c9024" />
          </li>
          <li>
@@ -129,10 +129,10 @@ Business Task:
                   <img width="940" height="46" alt="image" src="https://github.com/user-attachments/assets/e17ce9b2-7485-4e23-b7ec-748da58e0f11" />
                </li>
                <li>
-                  Used <code>ROW_NUMBER()</code>`` to remove duplicates. Duplicates are checked by rows having the same <code>ride_id</code>``, <code>rideable_type</code>``, <code>started_at</code>``, <code>ended_at</code>``, & <code>member_casual</code>``. Rows containing null values were excluded.
+                  Used <code>ROW_NUMBER()</code> to remove duplicates. Duplicates are checked by rows having the same <code>ride_id</code>, <code>rideable_type</code>, <code>started_at</code>, <code>ended_at</code>, & <code>member_casual</code>. Rows containing null values were excluded.
                </li>
                <li>
-                  A staging table <code>cd_stage1</code>`` was created to safely clean and preprocess data before analysis.
+                  A staging table <code>cd_stage1</code> was created to safely clean and preprocess data before analysis.
                </li>
                <li>
                   After removing duplicates, there are now 5,860,516 remaining rows.
@@ -140,7 +140,7 @@ Business Task:
             </ul>
          </li>
          <li>
-            <p>Check values in columns <code>rideable_type</code>`` and <code>member_casual</code>`` for any misspellings. Based on the results below, there are 3 distinct types of rides and 2 distinct types of riders.</p>
+            <p>Check values in columns <code>rideable_type</code> and <code>member_casual</code> for any misspellings. Based on the results below, there are 3 distinct types of rides and 2 distinct types of riders.</p>
             <div align='center'>
                <img width="198" height="144" alt="image" src="https://github.com/user-attachments/assets/f15e61a5-2025-4438-a005-a0efab854bae" />
                <img width="188" height="116" alt="image" src="https://github.com/user-attachments/assets/ed07d9d2-eb37-4502-a582-6967e54d9b3f" />
@@ -153,31 +153,31 @@ Business Task:
       <p>The preprocessing steps in MySQL are as follows:</p>
       <ol>
          <li>
-            Create column <code>ride_length</code>``, which is the length of each ride by subtracting column <code>started_at</code>`` from <code>ended_at</code>``.
+            Create column <code>ride_length</code>, which is the length of each ride by subtracting column <code>started_at</code> from <code>ended_at</code>.
             <ul>
-               <li>Used <code>TIME_TO_SEC(TIMEDIFF(ended_at, started_at))</code>``</li>
-               <li>Values are stored as <code>INT</code>`` in the table, which corresponds to the length of the ride in seconds</li>
+               <li>Used <code>TIME_TO_SEC(TIMEDIFF(ended_at, started_at))</code></li>
+               <li>Values are stored as <code>INT</code> in the table, which corresponds to the length of the ride in seconds</li>
             </ul>
          </li>
          <li>
-            Create column <code>ride_day</code>``, which is the day of the week of each ride.
+            Create column <code>ride_day</code>, which is the day of the week of each ride.
             <ul>
-               <li>Used <code>DAYNAME(started_at)</code>``</li>
-               <li>Values are stored as <code>VARCHAR(10)</code>``, which corresponds to the lengths of the name of the days</li>
+               <li>Used <code>DAYNAME(started_at)</code></li>
+               <li>Values are stored as <code>VARCHAR(10)</code>, which corresponds to the lengths of the name of the days</li>
             </ul>
          </li>
          <li>
-            Create column <code>ride_month</code>``, which is the month of each ride.
+            Create column <code>ride_month</code>, which is the month of each ride.
             <ul>
-               <li>Used <code>MONTH(started_at)</code>``</li>
-               <li>Values stored as <code>INT</code>``, which corresponds to the numeric value of each month</li>
+               <li>Used <code>MONTH(started_at)</code></li>
+               <li>Values stored as <code>INT</code>, which corresponds to the numeric value of each month</li>
             </ul>
          </li>
          <li>
-            Create column <code>ride_hour</code>``, which is the hour of each ride.
+            Create column <code>ride_hour</code>, which is the hour of each ride.
             <ul>
-               <li>Used <code>HOUR(started_at)</code>``</li>
-               <li>Values stored as <code>INT</code>``</li>
+               <li>Used <code>HOUR(started_at)</code></li>
+               <li>Values stored as <code>INT</code></li>
             </ul>
          </li>
       </ol>
