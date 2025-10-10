@@ -1,6 +1,9 @@
 # Google Data Analytics Capstone Project: Cyclistic Case Study 
 
 ## About
+<div align='center'>
+   <img width="325" height="325" alt="cyclistic_square" src="https://github.com/user-attachments/assets/9b0835af-c57f-4b21-bbac-f19377ac54da" />
+</div>
 <p>This is a capstone project for the completion of the Google Data Analytics Certificate. In order to answer the following business questions, I will follow the steps of the data analysis process: <i>Ask</i>, <i>Prepare</i>, <i>Process</i>, <i>Analyse</i>, <i>Share</i>, and <i>Act</i>.
 In this case study, I work for a fictional bike-share company, Cyclistic, to answer some business questions.</p><br>
 
